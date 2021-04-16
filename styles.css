@@ -6,9 +6,10 @@
 
 section {
     display: flex;
+    align-self: center;
   }
 
 .pic {
-    width:100px;
+    width:200px;
     height: auto;
 }
