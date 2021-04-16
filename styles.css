@@ -10,6 +10,12 @@ section {
   }
 
 .pic {
-    width:200px;
+    width:250px;
     height: auto;
+}
+
+article {
+    padding: 10px;
+    margin: 10px;
+    background: aqua;
 }
