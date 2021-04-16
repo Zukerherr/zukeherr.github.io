@@ -1,8 +1,14 @@
-.native{
+.native {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 50px;
+    align-self: center;
 }
 
 section {
     display: flex;
   }
+
+.pic {
+    width:100px;
+    height: auto;
+}
