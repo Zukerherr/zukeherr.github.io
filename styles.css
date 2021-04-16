@@ -13,18 +13,13 @@ section {
     justify-content: space-between;
   }
 
-.pic {
-    width: 350px;
-    height: auto;
-}
-
 article {
     padding: 30px;
     margin: 10px;
     background: rgba(97, 94, 94, 0.3);
 }
 
-h2, h5 {
+h2 {
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
     color: #002280;
