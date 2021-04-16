@@ -1,23 +1,32 @@
 .native {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 50px;
-    align-self: center;
+    font-size: 75px;
+    margin-top: 50px;
+    position: relative;
+    text-align: center;
 }
 
 section {
     display: flex;
+    padding: 75px;
     flex-wrap: wrap;
-    width: 1000px;
     justify-content: space-between;
   }
 
 .pic {
-    width:300px;
+    width: 350px;
     height: auto;
 }
 
 article {
     padding: 10px;
     margin: 10px;
-    background: aqua;
+    background: rgba(97, 94, 94, 0.3);
+}
+
+h2, h5 {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #002280;
+
 }
