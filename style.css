@@ -69,3 +69,40 @@ strong {
   font-size: 0.7em;
   text-align: left;
 }
+
+@media screen and (max-width: 1000px) {
+  .heading {
+    text-align: left;
+  }
+  
+  thead {
+    display: none;
+  }
+
+  tr, td {
+    display: block;
+  }
+
+  tr:not(:last-child) {
+    border-bottom: 5px solide rgb(116, 113, 113);
+  }
+
+  td {
+    padding-left: 54%;
+    position: relative;
+    }
+  td::before {
+    position: absolute;
+    padding: 5px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 45%;
+    content: attr(data-col-title);
+    font-weight: bold;
+    background-color: white;
+
+  }
+
+
+}
