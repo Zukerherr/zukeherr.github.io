@@ -10,30 +10,15 @@ window.onload = timedRefresh(50000);
 document.addEventListener('DOMContentLoaded', function(){
 
     my_porfolio = {
-        "bitcoin": 0.2074673,
-        "ethereum": 1.68790867,
-        "celo": 57.52118271,
-        "stellar": 445.4540398,
+        "uniswap": 0,
+        "1inch": 0,
+        "0x": 0,
         "balancer": 1.51869699,
         "kyber-network": 27.59726383,
-        "bitcoin-cash-sv": 0.2,
-        "maker": 0.01053881,
-        "compound-governance-token": 0.05476787,
-        "litecoin": 0.03626936,
-        "dogecoin": 2451.1967,
-        "everipedia": 3823.5968,
-        "band-protocol": 0.30406965,
-        "numeraire": 0.07228121,
-        "the-graph": 8.16330889,
-        "nucypher": 198.78100265,
-        "storj": 0
     }
-
-    const principal = 4321.72
 
     for (var i=0, sum_value=0; i<Object.keys(my_porfolio).length; i++){
         const crypto = Object.keys(my_porfolio)[i]
-        const quantity = my_porfolio[crypto]
         const crypto_url = 'https://www.coingecko.com/en/coins/' + crypto + '/'       
         var table = document.getElementById('table_content')
         fetch('https://api.coingecko.com/api/v3/coins/'+ crypto + '/')
@@ -42,22 +27,31 @@ document.addEventListener('DOMContentLoaded', function(){
             const price=data.market_data.current_price.usd;
             const icon=data.image.thumb;
             const change_pct=data.market_data.price_change_percentage_24h;
-            const crypto_value = price * quantity;
             const symbol=data.symbol.toUpperCase();
+            const category=data.categories;
+            const market_cap=data.market_data.market_cap.usd 
+            const fdv=data.market_data.fully_diluted_valuation.usd 
+            const coingecko_score=data.coingecko_score
+            console.log(coingecko_score)
+            const developer_score=data.developer_score
+            const community_score=data.community_score
+            const liquidity_score=data.liquidity_score
             var row = `<tr>
                             <td><a href=${crypto_url}>${crypto}</a></td>
                             <td>${symbol}</td>
                             <td><img src=${icon}></img></td>
+                            <td>${category}</td>
                             <td>${price.toFixed(2)}</td>
                             <td>${parseFloat(change_pct).toFixed(2)}%</td>
-                            <td>${quantity.toFixed(4)}x</td>
-                            <td>${crypto_value.toFixed(2)}</td>
+                            <td>${(market_cap/(10**9)).toFixed(2)}</td>
+                            <td>${(fdv/(10**9)).toFixed(2)}</td>
+                            <td>${coingecko_score.toFixed(2)}</td>
+                            <td>${developer_score.toFixed(2)}</td>
+                            <td>${community_score.toFixed(2)}</td>
+                            <td>${liquidity_score.toFixed(2)}</td>
                        </tr>`
             table.innerHTML += row
-            sum_value += crypto_value            
-            document.getElementById('total_value').innerHTML = sum_value.toFixed(2);
-            const cumulative_return = parseFloat((sum_value / principal - 1)*100).toFixed(2) + "%";
-            document.getElementById('cumulative_return').innerHTML = cumulative_return;
+
         })
     }
     
