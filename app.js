@@ -41,18 +41,18 @@ document.addEventListener('DOMContentLoaded', function(){
             const community_score=data.community_score
             const liquidity_score=data.liquidity_score
             var row = `<tr>
-                            <td><a href=${crypto_url}>${crypto}</a></td>
-                            <td>${symbol}</td>
-                            <td><img src=${icon}></img></td>
-                            <td id='category_column'>${category}</td>
-                            <td>${price.toFixed(2)}</td>
-                            <td>${parseFloat(change_pct).toFixed(2)}%</td>
-                            <td>${(market_cap/(10**9)).toFixed(2)}</td>
-                            <td>${(fdv/(10**9)).toFixed(2)}</td>
-                            <td>${coingecko_score.toFixed(2)}</td>
-                            <td>${developer_score.toFixed(2)}</td>
-                            <td>${community_score.toFixed(2)}</td>
-                            <td>${liquidity_score.toFixed(2)}</td>
+                            <td data-col-title='Asset Name'><a href=${crypto_url}>${crypto}</a></td>
+                            <td data-col-title='Symbol'>${symbol}</td>
+                            <td data-col-title='Icon'><img src=${icon}></img></td>
+                            <td data-col-title='Category' id='category_column'>${category}</td>
+                            <td data-col-title='Market Price ($)'>${price.toFixed(2)}</td>
+                            <td data-col-title='Price Change - 24h'>${parseFloat(change_pct).toFixed(2)}%</td>
+                            <td data-col-title='Market Cap ($bn)'>${(market_cap/(10**9)).toFixed(2)}</td>
+                            <td data-col-title='Fully Diluted Valuation ($bn)'>${(fdv/(10**9)).toFixed(2)}</td>
+                            <td data-col-title='Coingecko Score'>${coingecko_score.toFixed(2)}</td>
+                            <td data-col-title='Developer Score'>${developer_score.toFixed(2)}</td>
+                            <td data-col-title='Community Score'>${community_score.toFixed(2)}</td>
+                            <td data-col-title='Liquidity Score'>${liquidity_score.toFixed(2)}</td>
                        </tr>`
             table.innerHTML += row
 

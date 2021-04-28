@@ -66,15 +66,10 @@ strong {
 
 
 #category_column {
-  font-size: 0.7em;
   text-align: left;
 }
 
 @media screen and (max-width: 1000px) {
-  .heading {
-    text-align: left;
-  }
-  
   thead {
     display: none;
   }
@@ -84,12 +79,14 @@ strong {
   }
 
   tr:not(:last-child) {
-    border-bottom: 5px solide rgb(116, 113, 113);
+    border-bottom: 5px solid  rgb(116, 113, 113);
   }
 
   td {
     padding-left: 54%;
     position: relative;
+    text-align: left;
+
     }
   td::before {
     position: absolute;
