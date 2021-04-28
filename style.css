@@ -31,10 +31,20 @@
     border: 1px solid rgb(116, 113, 113);
     border-collapse: collapse;
   }
-  th, td {
-    padding: 12px;
-    text-align: center;
+
+  table {
+    table-layout: auto;
+    width: 60%;    
+    page-break-inside: auto;
   }
+
+  th, td {
+    padding: 0.8em;
+    text-align: center;
+    font-size: 1.2em;
+    page-break-inside: avoid; page-break-after: auto;
+  }
+
   th {
     background-color: rgba(179, 179, 171, 0.5);
   }
@@ -57,9 +67,15 @@ button {
 
 #uom {
   font-style: italic;
-  font-size: 10px;
+  font-size: 0.8em;
 }
 
 strong {
   text-decoration: underline;
+}
+
+
+#category_column {
+  font-size: 75%;
+  text-align: left;
 }

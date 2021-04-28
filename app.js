@@ -13,8 +13,12 @@ document.addEventListener('DOMContentLoaded', function(){
         "uniswap": 0,
         "1inch": 0,
         "0x": 0,
+        "loopring": 0,
         "balancer": 1.51869699,
         "kyber-network": 27.59726383,
+        "safemoon": 0,
+        "audius": 0,
+        "storj": 0
     }
 
     for (var i=0, sum_value=0; i<Object.keys(my_porfolio).length; i++){
@@ -28,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function(){
             const icon=data.image.thumb;
             const change_pct=data.market_data.price_change_percentage_24h;
             const symbol=data.symbol.toUpperCase();
-            const category=data.categories;
+            const category=data.categories.join(', ');
             const market_cap=data.market_data.market_cap.usd 
             const fdv=data.market_data.fully_diluted_valuation.usd 
             const coingecko_score=data.coingecko_score
@@ -40,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function(){
                             <td><a href=${crypto_url}>${crypto}</a></td>
                             <td>${symbol}</td>
                             <td><img src=${icon}></img></td>
-                            <td>${category}</td>
+                            <td id='category_column'>${category}</td>
                             <td>${price.toFixed(2)}</td>
                             <td>${parseFloat(change_pct).toFixed(2)}%</td>
                             <td>${(market_cap/(10**9)).toFixed(2)}</td>
