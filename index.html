@@ -1,37 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        
+        <title>Crypto Portfolio</title>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-        <link rel ="stylesheet" href="styles.css">
+        <link rel ="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-        <title>coffee?</title>
-        <link rel="icon" type="image/png" href="https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.pngall.com%2Fcafe-png%2Fdownload%2F41806&psig=AOvVaw0GrLk2IiaT7p0Xkt0rYh9r&ust=1618616985217000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNC8mqi4gfACFQAAAAAdAAAAABAD">
-        <style>
-
-        </style>
+        <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Zen+Dots&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="data:image/png;base64,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" />
+        <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+        <script defer src='./app.js'></script>
     </head>
-
     <body>
-        <div class="native">
-            bonjour, mon amis! hello world!
+        <div>
+            <div id="element-to-print">
+                <h2>My Crypto Portfolio</h2>
+                <p>🚀  as of <strong id='update_date'>____</strong> my cumulative return is: <strong id='cumulative_return'>____</strong>  🚀</p>
+                <p id='uom'>(in USD)</p>
+                <table id='table_view'>
+                    <tr>
+                        <th>Name</th>
+                        <th>Symbol</th>
+                        <th>Icon</th>
+                        <th>Market Price</th>
+                        <th>Price Change % 24h</th>
+                        <th>Holding Quantity</th>
+                        <th>Holding Value</th>
+                    </tr>
+                    <tbody id='table_content'>
+
+                    </tbody>
+                    <tr id='row_total'>
+                        <td>Total Value</td>
+                        <td>🍀</td>
+                        <td>🍀</td>
+                        <td>🍀</td>
+                        <td>🍀</td>
+                        <td>🍀</td>
+                        <td id='total_value'></td>
+                    </tr>        
+                </table>
+                <p></p>
+                <a href="https://www.coingecko.com/en">Data provided by coingecko</a>
+            </div>
+            <p></p>
+            <button onclick="generatePDF()">&#8595 download &#8595</button>
+            
         </div>
-
-        <section>
-            <article>
-              <h2>Text Box #1</h2>
-            </article>
-      
-            <article>
-              <h2>Text Box #2</h2>
-            </article>
-      
-            <article>
-              <h2>Text Box #3</h2>
-            </article>
-          </section>
-
     </body>
+
 </html>
