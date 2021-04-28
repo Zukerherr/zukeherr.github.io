@@ -100,8 +100,6 @@ strong {
     width: 45%;
     content: attr(data-col-title);
     font-weight: bold;
-    background-color: white;
-
   }
 
 
