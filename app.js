@@ -18,8 +18,7 @@ document.addEventListener('DOMContentLoaded', function(){
         "kyber-network": 27.59726383,
         "safemoon": 0,
         "audius": 0,
-        "storj": 0,
-        "stacks": 0
+        "storj": 0
     }
 
     for (var i=0, sum_value=0; i<Object.keys(my_porfolio).length; i++){
