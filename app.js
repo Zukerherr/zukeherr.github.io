@@ -18,7 +18,10 @@ document.addEventListener('DOMContentLoaded', function(){
         "kyber-network": 27.59726383,
         "safemoon": 0,
         "audius": 0,
-        "storj": 0
+        "storj": 0,
+        "trust-wallet-token": 0,
+        "atomic-wallet-coin": 0,
+        "bread": 0 
     }
 
     for (var i=0, sum_value=0; i<Object.keys(my_porfolio).length; i++){
