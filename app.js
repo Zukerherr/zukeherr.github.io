@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', function(){
         "storj": 0,
         "trust-wallet-token": 0,
         "atomic-wallet-coin": 0,
-        "bread": 0 
+        "bread": 0,
+        "blockstack": 0
     }
 
     for (var i=0, sum_value=0; i<Object.keys(my_porfolio).length; i++){
