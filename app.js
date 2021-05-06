@@ -1,11 +1,10 @@
-/*
-# autofresh module
+/* autofresh module */
+
 function timedRefresh(timeoutPeriod) {
 	setTimeout("location.reload(true);",timeoutPeriod);
 }
 
 window.onload = timedRefresh(50000);
-*/
 
 document.addEventListener('DOMContentLoaded', function(){
 
@@ -22,7 +21,8 @@ document.addEventListener('DOMContentLoaded', function(){
         "trust-wallet-token": 0,
         "atomic-wallet-coin": 0,
         "bread": 0,
-        "blockstack": 0
+        "blockstack": 0,
+        "solana": 0
     }
 
     for (var i=0, sum_value=0; i<Object.keys(my_porfolio).length; i++){
