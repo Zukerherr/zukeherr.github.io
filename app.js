@@ -22,7 +22,10 @@ document.addEventListener('DOMContentLoaded', function(){
         "atomic-wallet-coin": 0,
         "bread": 0,
         "blockstack": 0,
-        "solana": 0
+        "solana": 0,
+        "showcase-token": 0,
+        "shiba-inu": 0
+
     }
 
     for (var i=0, sum_value=0; i<Object.keys(my_porfolio).length; i++){
