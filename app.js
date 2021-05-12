@@ -24,7 +24,9 @@ document.addEventListener('DOMContentLoaded', function(){
         "blockstack": 0,
         "solana": 0,
         "showcase-token": 0,
-        "shiba-inu": 0
+        "shiba-inu": 0,
+        "near": 0,
+        "orchid-protocol": 0
 
     }
 
