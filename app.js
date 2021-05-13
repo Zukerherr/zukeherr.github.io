@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function(){
         "bread": 0,
         "blockstack": 0,
         "solana": 0,
-        "showcase-token": 0,
+        "sushiswap": 0,
         "shiba-inu": 0,
         "near": 0,
         "orchid-protocol": 0
