@@ -26,7 +26,8 @@ document.addEventListener('DOMContentLoaded', function(){
         "sushi": 0,
         "shiba-inu": 0,
         "near": 0,
-        "orchid-protocol": 0
+        "orchid-protocol": 0,
+        "polkastarter": 0
 
     }
 
