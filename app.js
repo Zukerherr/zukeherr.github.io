@@ -4,7 +4,7 @@ function timedRefresh(timeoutPeriod) {
 	setTimeout("location.reload(true);",timeoutPeriod);
 }
 
-window.onload = timedRefresh(50000);
+window.onload = timedRefresh(150000);
 
 document.addEventListener('DOMContentLoaded', function(){
 
