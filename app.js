@@ -27,7 +27,10 @@ document.addEventListener('DOMContentLoaded', function(){
         "shiba-inu": 0,
         "near": 0,
         "orchid-protocol": 0,
-        "polkastarter": 0
+        "polkastarter": 0,
+	"avalanche-2": 0,
+	"joe": 0
+	    
 
     }
 
